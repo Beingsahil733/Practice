@@ -1,0 +1,10 @@
+---
+- name: deploy a website
+  become: yes
+  hosts: all
+  tasks:
+    - name: website deployment
+      ansible.builtin.apt: 
+        name: nginx
+        state: present
+        
