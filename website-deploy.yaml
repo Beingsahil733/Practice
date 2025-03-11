@@ -23,9 +23,10 @@
         remote_src: yes
     - name: copy the folder into coffee folder
       ansible.builtin.copy:
-        src: /tmp/wave-cafe
+        src: /var/www/html/2121_wave_cafe
         dest: /var/www/html/coffee
         remote_src: yes
+
 
 
 
