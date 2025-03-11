@@ -19,17 +19,14 @@
     - name: deploying the website
       ansible.builtin.unarchive:
         src: https://www.free-css.com/assets/files/free-css-templates/download/page290/wave-cafe.zip
-        dest: /var/www/html
+        dest: /tmp
         remote_src: yes
     - name: copy the folder into coffee folder
       ansible.builtin.copy:
-        src: /var/www/html/2121_wave_cafe/
+        src: /tmp/2121_wave_cafe/
         dest: /var/www/html/coffee
         remote_src: yes
-    - name: remove the folder
-      ansible.builtin.file:
-        src: /var/www/html/2121_wave_cafe
-        state: absent
+
 
 
 
