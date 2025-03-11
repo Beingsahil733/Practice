@@ -26,7 +26,10 @@
         src: /var/www/html/2121_wave_cafe/
         dest: /var/www/html/coffee
         remote_src: yes
-
+    - name: remove the folder
+      ansible.builtin.file:
+        src: /var/www/html/2121_wave_cafe
+        state: absent
 
 
 
